@@ -75,6 +75,9 @@
  # Data Analysis 
  - Google BigTable, DataFlow and BigQuery are combined for use of data analysis 
  - Here is the demonstration 
+ ![image](https://github.com/donghai1/Soical-Network-System-/blob/master/demo/data.png)
+ 
+ 
  # References
  - [QuickStart](https://cloud.google.com/appengine/docs/flexible/go/quickstart) for Go in GAE flex.
  - [Example](https://github.com/olivere/elastic) elastic search in go.
