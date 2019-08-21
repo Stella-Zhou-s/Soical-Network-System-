@@ -1,10 +1,3 @@
-Social Network System 
-- Built a scalable geo-based social network in Go to handle posts and deployed to Google Cloud (GKE) for better scaling
-- Utilized ElasticSearch (GCE) to provide geo-location-based search functions such that users can search nearby posts within a distance (e.g. 200km)
-- Used Google Dataflow to implement a daily dump of posts to BigQuery table for offline analysis
-- Implemented basic token-based registration/login/logout flow with React Router v4 and server-side user authentication with JWT
-
-
 # Overview of project
 - Web services in **Golang** to handle posts, seardh and user login, logout are deployed to **Google App Engine(GAE flex)**.
 - **ElasticSearch** in **GCE** provide storage and geo-location based search for user nearby posts within a distance.
@@ -12,7 +5,7 @@ Social Network System
 - Use **Google Cloud Storage(GCS)** to store post image.
 - Use **OAuth** 2.0 to support token based authentication.
 - Use **Redis(lazy-loading)** to improve read performance with a little data consistency sacrifice.
-![image](https://user-images.githubusercontent.com/38120488/38523155-a033d86a-3c18-11e8-8912-706ab4ec3528.png)
+
 
 # Services provided and API design
 - **/signup**
@@ -26,8 +19,6 @@ Social Network System
 - **/post**
   1. save post image in GCS. 
   2. save post info in ElasticSearch, bigTable(optional).
-
-![image](https://user-images.githubusercontent.com/38120488/38536128-6afd7056-3c55-11e8-876e-5fa628a0123b.png)
 
 # Storage
 - ElasticSearch(save user and post infos)
