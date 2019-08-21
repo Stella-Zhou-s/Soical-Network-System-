@@ -1,10 +1,9 @@
 # Overview of project
-- Web services in **Golang** to handle posts, seardh and user login, logout are deployed to **Google App Engine(GAE flex)**.
-- **ElasticSearch** in **GCE** provide storage and geo-location based search for user nearby posts within a distance.
-- Use **Google Dataflow** to dump posts from **BigTable** to **BigQuery** for offline analysis
-- Use **Google Cloud Storage(GCS)** to store post image.
-- Use **OAuth** 2.0 to support token based authentication.
-- Use **Redis(lazy-loading)** to improve read performance with a little data consistency sacrifice.
+- Web services in **Golang** to handle posts, seardh and user login, logout deployed to **Google App Engine(GAE flex)**.
+- **ElasticSearch** in **GCE** provide storage and geo-location based search for user nearby posts within a distance.The center of the peoject is to search with Elastic Search based on GeoIndex(query optimization) and save post to Elastic Search. 
+- Use **Google Cloud Storage(GCS)** as an assistance for Elastic Search by saving images.
+- Use **OAuth** 2.0 to support token based authentication. user.go handles login and signup based on Elastic Search. main.go use JWT to protect post and search endpoints. When we do the requests, we need to add token to verify the identity.
+- Use **Google Dataflow** to dump posts from **BigTable** to **BigQuery** for offline analysis.
 
 - Here is the high level of the project 
 ![image](https://github.com/donghai1/Soical-Network-System-/blob/master/demo/project.png)
@@ -73,7 +72,9 @@
     * find all messages in LA(lat range [33, 34], lon range [-118, -117]) -- base for geo-based filter.
     * find all message with spam words
 
- 
+ # Data Analysis 
+ - Google BigTable, DataFlow and BigQuery are combined for use of data analysis 
+ - Here is the demonstration 
  # References
  - [QuickStart](https://cloud.google.com/appengine/docs/flexible/go/quickstart) for Go in GAE flex.
  - [Example](https://github.com/olivere/elastic) elastic search in go.
