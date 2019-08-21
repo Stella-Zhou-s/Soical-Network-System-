@@ -24,7 +24,7 @@
   1. save post image in GCS. 
   2. save post info in ElasticSearch, bigTable(optional).
  - Here is the logic chain 
- ![image](https://github.com/donghai1/Soical-Network-System-/blob/master/demo/logic.png)
+ ![image](https://github.com/donghai1/Soical-Network-System-/blob/master/demo/log.png)
 
 # Storage
 - ElasticSearch(save user and post infos)
