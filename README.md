@@ -75,7 +75,7 @@
  # Data Analysis 
  - Google BigTable, DataFlow and BigQuery are combined for use of data analysis 
  - Here is the demonstration 
- ![image](https://github.com/donghai1/Soical-Network-System-/blob/master/demo/data.png)
+ ![image](https://github.com/donghai1/Soical-Network-System-/blob/master/demo/data.JPG)
  
  
  # References
