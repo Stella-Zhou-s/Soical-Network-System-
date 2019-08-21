@@ -6,6 +6,9 @@
 - Use **OAuth** 2.0 to support token based authentication.
 - Use **Redis(lazy-loading)** to improve read performance with a little data consistency sacrifice.
 
+- Here is the high level of the project 
+
+
 
 # Services provided and API design
 - **/signup**
