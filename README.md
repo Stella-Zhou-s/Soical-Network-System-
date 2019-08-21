@@ -7,6 +7,7 @@
 - Use **Redis(lazy-loading)** to improve read performance with a little data consistency sacrifice.
 
 - Here is the high level of the project 
+![image](https://github.com/donghai1/Soical-Network-System-/blob/master/demo/project.png)
 
 
 
@@ -22,6 +23,8 @@
 - **/post**
   1. save post image in GCS. 
   2. save post info in ElasticSearch, bigTable(optional).
+ - Here is the logic chain 
+ ![image](https://github.com/donghai1/Soical-Network-System-/blob/master/demo/logic.png)
 
 # Storage
 - ElasticSearch(save user and post infos)
@@ -69,14 +72,7 @@
     * get number of posts per user id -- base to detect spam user.
     * find all messages in LA(lat range [33, 34], lon range [-118, -117]) -- base for geo-based filter.
     * find all message with spam words
-    
-# Implimentation Details
-- routing and auth
-  * Here use `gorilla/mux` for routing and `dgrijalva/jwt-go` for JWT(JSON Web Token) token based authentication, useful [doc](https://auth0.com/blog/authentication-in-golang/).
-- redis cache
-  * adopt lazy-loading(load DB after a cache miss) pattern.
-  * 30MB RAM, 30 connections for [free](https://redislabs.com/blog/redis-cloud-30mb-ram-30-connections-for-free/).
-  * [Sample code](https://github.com/go-redis/redis)
+
  
  # References
  - [QuickStart](https://cloud.google.com/appengine/docs/flexible/go/quickstart) for Go in GAE flex.
